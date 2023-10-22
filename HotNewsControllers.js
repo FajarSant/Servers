@@ -45,18 +45,12 @@ module.exports = async (req, res) => {
         res.status(404).json({ error: "Tidak ada berita yang ditemukan." });
       }
     } else {
-      res
-        .status(response.status)
-        .json({
-          error: "Gagal mengambil data berita. Halaman tidak ditemukan atau sumber berita tidak tersedia.",
-        });
+      res.status(response.status).json({
+        error: "Gagal mengambil data berita. Halaman tidak ditemukan atau sumber berita tidak tersedia.",
+      });
     }
   } catch (error) {
     console.error("Gagal mengambil data berita:", error);
     res.status(500).json({ error: "Terjadi kesalahan. " + error.message });
   }
 };
-
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
-});

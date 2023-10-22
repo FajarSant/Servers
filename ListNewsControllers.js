@@ -2,7 +2,7 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 const Sentiment = require("sentiment");
 
-async function HotNewsControllers(res, url) {
+async function ListNewsControllers(res, url) {
   try {
     // Mengambil data dari URL yang diberikan
     const response = await axios.get(url);
@@ -46,4 +46,4 @@ async function HotNewsControllers(res, url) {
   }
 }
 
-module.exports = HotNewsControllers;
+module.exports = ListNewsControllers;

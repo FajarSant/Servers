@@ -2,7 +2,7 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 const Sentiment = require("sentiment");
 
-const PendidikanControllers = async (req, res) => {
+const OlahragaControllers = async (req, res) => {
   try {
     const url = "https://www.solopos.com/tag/sarana-olahraga-karanganyar";
 
@@ -48,5 +48,5 @@ const PendidikanControllers = async (req, res) => {
 };
 
 module.exports = {
-  PendidikanControllers,
+  OlahragaControllers,
 };
